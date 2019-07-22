@@ -6,6 +6,23 @@ import cucumber.api.java.en.When;
 
 import static org.junit.Assert.*;
 
-public class Stepdefs {
+public class Stepdefs {@Given("I am logged out")
+public void i_am_logged_out() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+    @When("I enter username {string} and password {string}")
+    public void i_enter_username_and_password(String string, String string2) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("Then the user is informed that the login is succesful")
+    public void then_the_user_is_informed_that_the_login_is_succesful() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
 
 }
