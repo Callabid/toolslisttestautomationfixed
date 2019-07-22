@@ -12,6 +12,9 @@
     *User: Someone who wants to create a Tools List using our application
     *Supporter: This is what a customer calls "Admin" users
 
+    Background: logout
+      Given I am logged out
+
     @High Impact-Impact
       Scenario Outline: a Valid user logs into the application
         Given I am Logged out
