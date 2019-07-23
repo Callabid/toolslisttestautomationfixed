@@ -1,5 +1,4 @@
-
-  Feature: Login
+Feature: Login
     In order to access the website
     As user
     I want to know if my login is succesful
@@ -31,3 +30,5 @@
           #Given I am logged out
           When I enter username "attacker" and password "donletmein"
           Then the user is informed that the login is unsuccesful
+
+
