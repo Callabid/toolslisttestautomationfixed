@@ -13,7 +13,7 @@ public void i_am_logged_out() {
 }
 
     @When("I enter username {string} and password {string}")
-    public void i_enter_username_and_password(String string, String string2) {
+    public void i_enter_username_and_password(String username, String password) {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
@@ -25,4 +25,29 @@ public void i_am_logged_out() {
     }
 
 
+    You can implement missing steps with the snippets below:
+
+    @Given("User has typed tool name Zabby")
+    public void user_has_typed_tool_name_Zabby() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Given("Zabby tool list is returned")
+    public void zabby_tool_list_is_returned() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @When("I search tool name <toolname> in the search field")
+    public void i_search_tool_name_toolname_in_the_search_field() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("the correct tool will appear in the list")
+    public void the_correct_tool_will_appear_in_the_list() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
 }
