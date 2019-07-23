@@ -39,8 +39,8 @@ public void i_am_logged_out() {
         throw new cucumber.api.PendingException();
     }
 
-    @When("I search tool name <toolname> in the search field")
-    public void i_search_tool_name_toolname_in_the_search_field() {
+    @When("I search tool name {string} in the search field")
+    public void i_search_tool_name_toolname_in_the_search_field(String toolname) {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
