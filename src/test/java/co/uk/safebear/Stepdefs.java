@@ -25,7 +25,7 @@ public void i_am_logged_out() {
     }
 
 
-    You can implement missing steps with the snippets below:
+
 
     @Given("User has typed tool name Zabby")
     public void user_has_typed_tool_name_Zabby() {
