@@ -1,12 +1,32 @@
 package co.uk.safebear;
 
+import co.uk.safebear.utils.Drivers;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
 
 import static org.junit.Assert.*;
 
-public class Stepdefs {@Given("I am logged out")
+public class Stepdefs {
+
+    WebDriver driver;
+
+    @Before
+
+    public void setUp(){
+
+        //get the driver from the browser (e.g. ChromeDriver)
+        driver = Drivers.getDriver();
+        //Navigate the URL to our webpage
+        driver.get(Drivers.getUrl());
+    }
+
+
+
+
+    @Given("I am logged out")
 public void i_am_logged_out() {
     // Write code here that turns the phrase above into concrete actions
     throw new cucumber.api.PendingException();
@@ -50,4 +70,6 @@ public void i_am_logged_out() {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
+
+
 }
