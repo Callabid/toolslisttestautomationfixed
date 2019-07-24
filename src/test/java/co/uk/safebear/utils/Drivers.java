@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.Callable;
+
 public class Drivers {
     //here we set our url
     private static final String URL = System.getProperty("url","http://toolslist.safebear.co.uk:8080");
@@ -28,6 +30,16 @@ public class Drivers {
                 WebDriverManager.chromedriver().setup();
                 //Return our Driver
                 return new ChromeDriver();
+
+            case ("CHROME_HEADLESS"):
+                System.out.println("excuting on CHROME HEADLESS");
+                chromeOptions = new ChromeOptions();
+                //Set chrome to run headlessly
+                chromeOptions.addArguments("headless");
+
+                //make sure window is large and maximsed
+                //so nothing disappears off screen
+                // (evan in headless mode!)
 
             case "FIRFOX":
                 //Tell user which Browser we're running our test on
