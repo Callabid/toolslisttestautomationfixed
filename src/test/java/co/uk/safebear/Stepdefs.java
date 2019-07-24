@@ -1,6 +1,7 @@
 package co.uk.safebear;
 
 import co.uk.safebear.utils.Drivers;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,12 +16,28 @@ public class Stepdefs {
 
     @Before
 
-    public void setUp(){
+    public void setUp() {
 
         //get the driver from the browser (e.g. ChromeDriver)
         driver = Drivers.getDriver();
         //Navigate the URL to our webpage
         driver.get(Drivers.getUrl());
+
+        driver.get("http://toolslist.safebear.co.uk:8080");
+        driver.get(Drivers.getUrl());
+    }
+
+    @After
+    public void tearDown(){
+
+        try {
+            Thread.sleep(Integer.parseInt(System.getProperty("sleep","2000")));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        driver.quit();
+
     }
 
 
