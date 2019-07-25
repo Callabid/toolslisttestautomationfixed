@@ -13,25 +13,30 @@ public class Loginpage {
     @NonNull
     WebDriver driver;
 
-    public String getPage(){
+    public String getPage() {
 
         return driver.getTitle();
     }
 
 
-    public void enterUsername(String username){
+    public void enterUsername(String username) {
 
         driver.findElement(locators.getUsernamelocator()).sendKeys(username);
     }
 
-    public void enterPassword(String password){
+    public void enterPassword(String password) {
 
         driver.findElement(locators.getPasswordlocator()).sendKeys(password);
     }
 
-    public void clickLoginButton(){
+    public void clickLoginButton() {
 
         driver.findElement(locators.getSubmitbottonlocator()).click();
     }
+
+    public String checkForFailedLoginWarning() {
+        return driver.findElement(locators.getFailedLoginMessage()).getText();
+    }
+
 
 }

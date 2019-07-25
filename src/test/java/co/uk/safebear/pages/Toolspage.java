@@ -18,4 +18,25 @@ public class Toolspage {
 
         return driver.getTitle();
     }
+//    public void clickOnsubmitSearchbutton(){
+//
+//        driver.findElement(locators.getSearchbuttonLocator()).click());
+//
+//    }
+//
+//    public void typeInSearchField(String toolName){
+//        driver.findElement(locators.getSearchbuttonLocator()).sendKeys(toolName);
+//    }
+
+    public String getNameOfTool(){
+
+        return driver.findElement(locators.getTestCafeToollocator()).getText();
+    }
+
+    public String checkForLoginSuccessfulMessage(){
+
+        return driver.findElement(locators.getSuccessfulLoginMessage()).getText();
+    }
 }
+
+

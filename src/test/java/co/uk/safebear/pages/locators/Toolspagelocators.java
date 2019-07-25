@@ -7,4 +7,10 @@ import org.openqa.selenium.By;
 public class Toolspagelocators {
 
     private By successfulLoginMessage = By.xpath(".//body/div[@class ='container']/p/b");
+
+    //  private By searchbuttonLocator
+
+    private By testCafeToollocator = By.xpath(".='Tescafe'");
+
+
 }
