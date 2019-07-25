@@ -1,9 +1,13 @@
 package co.uk.safebear.pages;
 
 import co.uk.safebear.pages.locators.Loginpagelocators;
+import co.uk.safebear.utils.Drivers;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.openqa.selenium.WebDriver;
+import org.w3c.dom.Text;
+
+import java.rmi.activation.ActivationGroup_Stub;
 
 @RequiredArgsConstructor
 public class Loginpage {
@@ -33,5 +37,12 @@ public class Loginpage {
 
         driver.findElement(locators.getSubmitbottonlocator()).click();
     }
+public void enterToolName(String ToolName){
+    driver.findElement (locators.getToolsNameLocator()).sendKeys(ToolName)
+}
 
+public void clickSearchButton(){
+        driver.findElement(locators.getSearchButtonLocater()).submit();
+
+}
 }

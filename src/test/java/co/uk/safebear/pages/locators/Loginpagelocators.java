@@ -2,6 +2,7 @@ package co.uk.safebear.pages.locators;
 
 import lombok.Data;
 import org.openqa.selenium.By;
+
 @Data
 public class Loginpagelocators {
 
@@ -11,6 +12,9 @@ public class Loginpagelocators {
     private By Submitbottonlocator = By.id("enter");
 
     private By failedLoginMessage = By.xpath(".//p[@id='rejectLogin']/b");
+
+    private By toolsnamelocater = By,id("toolname");
+
 
 
 
