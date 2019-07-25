@@ -8,9 +8,14 @@ public class Toolspagelocators {
 
     private By successfulLoginMessage = By.xpath(".//body/div[@class ='container']/p/b");
 
-    //  private By searchbuttonLocator
+    // A locator for the Search field
+    private By searchFieldLocator = By.id("toolName");
 
-    private By testCafeToollocator = By.xpath(".='Tescafe'");
+    // A locator for the Search button
+    private By searchButtonLocator = By.xpath(".//button[@type='submit' and @class='btn btn-info']");
+
+    // A locator for the product name that's returned
+    private By testCafeToollocator = By.xpath(".='TestCafe'");
 
 
 }
